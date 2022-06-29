@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+   <h5 class="my-3 border-bottom pb-2">회원가입</h5>
+   <form method="post">
+      {{ form.csrf_token }}
+      {{form.username.label}}
+      {{form.username(class='form-control')}}
+
+      {{form.password1.label}}
+      {{form.password1(class='form-control')}}
+
+      {{form.password2.label}}
+      {{form.password2(class='form-control')}}
+
+      {{form.email.label}}
+      {{form.email(class='form-control')}}
+
+      {{form.sectors.label}}
+      {{form.sectors(class='form-control')}}
+
+      {{form.salery.label}}
+      {{form.salery(class='form-control')}}
+
+      {{form.region.label}}
+      {{form.region(class='form-control')}}
+
+
+
+
+      <button type="submit" class="btn my-3 btn-primary">회원가입</button>
+   </form>
+</div>
+{% endblock %}
